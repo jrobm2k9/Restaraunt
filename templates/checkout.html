@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <h1>Your Shopping Cart</h1>
+    {% if cart %}
+    {% for item in cart %}
+    <p>{{ item }}</p>
+    {% endfor %}
+    {% else %}
+    <h3>You have not added any items yet.</h3>
+    {% endif %}
+{% endblock %}

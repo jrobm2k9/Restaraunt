@@ -2,61 +2,74 @@
 
 {% block body %}
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6 text-center">
-            <div class="card text-center">
-                <div class="card-body">
-                  <h1 class="card-title">Breakfast</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Breakfast Tacos</h5>
-              <p class="card-text">Choose from San Marcos' best tacos!</p>
-            </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">3 Carne Guisada $5.99</li>
-                <li class="list-group-item">3 Carne Guisada with Beans $5.99</li>
-                <li class="list-group-item">3 Carne Guisada with Eggs $6.99</li>
-                <li class="list-group-item">3 Potato and Bean $3.99</li>
-                <li class="list-group-item">3 Potato and Bean with Bacon $5.99</li>
-                <li class="list-group-item">3 Potato and Bean with Eggs $5.99</li>
-                <li class="list-group-item">3 Picadillo with Cheese $7.99</li>
-                <li class="list-group-item">3 Picadillo with Beans $8.99</li>
-                <li class="list-group-item">3 Picadillo with Eggs $9.99</li>
-              </ul>
+  <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 text-center">
+          <div class="card text-center">
+              <div class="card-body">
+                <h1 class="card-title">Breakfast</h1>
+              </div>
           </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Huevos Rancheros</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">1 Egg Plate</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">2 Egg Plate</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Migas Plate</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Breakfast Tacos</h5>
+            <p class="card-text">Choose from San Marcos' best tacos!</p>
+          </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">3 Carne Guisada $5.99</li>
+              <li class="list-group-item">3 Carne Guisada with Beans $5.99</li>
+              <li class="list-group-item">3 Carne Guisada with Eggs $6.99</li>
+              <li class="list-group-item">3 Potato and Bean $3.99</li>
+              <li class="list-group-item">3 Potato and Bean with Bacon $5.99</li>
+              <li class="list-group-item">3 Potato and Bean with Eggs $5.99</li>
+              <li class="list-group-item">3 Picadillo with Cheese $7.99</li>
+              <li class="list-group-item">3 Picadillo with Beans $8.99</li>
+              <li class="list-group-item">3 Picadillo with Eggs $9.99</li>
+            </ul>
         </div>
       </div>
+      <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Huevos Rancheros</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">1 Egg Plate</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">2 Egg Plate</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Migas Plate</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+      </div>
+    </div>
 </div>
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.breakfast_menu.label }}<br>
+        {{ form.breakfast_menu }} {{ form.total }}
+    </p>
+    <!-- <p>
+        {{ form.breakfast_menu }}
+    </p> -->
+    <p>
+        {{ form.submit() }}
+    </p>
+  </form>
 {% endblock %}
